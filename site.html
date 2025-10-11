@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SNAP SENSE — CS2 SemiRage</title>
+  <style>
+    :root {
+      --bg:#050507;
+      --muted:#9aa0a6;
+      --accent1:#00ff88;
+      --accent2:#00ccff;
+      --glass:rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,"Segoe UI",Roboto,Arial,system-ui;
+      background:
+        radial-gradient(1200px 800px at 10% 10%,rgba(0,204,255,0.03),transparent),
+        radial-gradient(900px 600px at 90% 90%,rgba(0,255,136,0.02),transparent),
+        var(--bg);
+      color:#e9eef1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .card{
+      max-width:760px;
+      background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+      border-radius:14px;
+      padding:28px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.7);
+      border:1px solid rgba(255,255,255,0.03);
+      text-align:center;
+    }
+    .brand{
+      font-weight:900;
+      font-size:32px;
+      background:linear-gradient(45deg,var(--accent1),var(--accent2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .subtitle{color:var(--muted);font-size:14px;margin-top:6px}
+    .preview{
+      width:100%;
+      margin:24px auto 8px;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 0 25px rgba(0,255,136,0.08);
+    }
+    .preview img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    /* Слоган */
+    .slogan{margin-top:20px}
+    .s-line{font-weight:800;font-size:34px;line-height:1.1}
+    .s-word{
+      opacity:0;
+      transform:translateY(18px) scale(0.98);
+      display:inline-block;
+      animation:wordIn 700ms cubic-bezier(.15,.85,.25,1) forwards;
+    }
+    .snap{
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    @keyframes wordIn{
+      0%{opacity:0;transform:translateY(18px) scale(0.98)}
+      60%{opacity:1;transform:translateY(-6px) scale(1.02)}
+      100%{opacity:1;transform:translateY(0) scale(1)}
+    }
+
+    /* Функции */
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:12px;
+      margin:26px 0 10px;
+      text-align:left;
+    }
+    .feat{
+      background:var(--glass);
+      border-radius:10px;
+      padding:12px 14px;
+      color:var(--muted);
+      font-size:14px;
+      border:1px solid rgba(255,255,255,0.03);
+      transition:background .3s ease;
+    }
+    .feat:hover{background:rgba(255,255,255,0.04);color:#fff}
+
+    /* Автор и телега */
+    .author{
+      margin-top:18px;
+      font-size:14px;
+      color:var(--muted);
+      opacity:0;
+      animation:kickerIn 700ms ease forwards;
+      animation-delay:1.2s;
+    }
+    @keyframes kickerIn{to{opacity:1}}
+    .tg-link{
+      margin-top:20px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:#1b1c1f;
+      padding:12px;
+      border-radius:50%;
+      transition:transform .15s ease, background .3s ease;
+    }
+    .tg-link:hover{
+      background:#25282b;
+      transform:translateY(-2px);
+    }
+    .tg-link svg{width:30px;height:30px;}
+    @media(max-width:520px){
+      .s-line{font-size:26px}
+      .feat{font-size:13px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="brand">SNAP SENSE</div>
+    <div class="subtitle">SemiRage cheat — CS2</div>
+
+    
+    <div class="preview">
+      <img src="snap.jpg" alt="SNAP SENSE preview">
+    </div>
+
+    
+    <div class="slogan">
+      <div class="s-line">
+        <span class="s-word" style="animation-delay:0.1s">Get</span>
+        <span class="s-word" style="animation-delay:0.25s">good</span>
+      </div>
+      <div class="s-line">
+        <span class="s-word" style="animation-delay:0.45s">get</span>
+        <span class="s-word snap" style="animation-delay:0.65s">SNAP</span>
+        <span class="s-word snap" style="animation-delay:0.85s">SENSE</span>
+      </div>
+    </div>
+
+   
+    <div class="features"> <center/>
+      <div class="feat">ESP</div>
+      <div class="feat">Aimbot</div>
+      <div class="feat">FOV Changer</div>
+      <div class="feat">No Flash</div>
+      <div class="feat">Auto Accept</div>
+      <div class="feat">Regular Updates</div>
+    </div>
+
+    <div class="author">By EHS</div>
+
+    <!-- Иконка Telegram -->
+    <a href="https://t.me/snapsense" class="tg-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="#0088cc" d="m12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.14.141-.259.259-.374.261l.213-3.053 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.136-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+      </svg>
+    </a>
+  </main>
+</body>
+</html>
